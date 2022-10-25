@@ -83,10 +83,13 @@ app.use('/message/*', async (c, next) => {
 app.get('/message/hello', (c) => c.text('Hello Middleware!'))
 ```
 
+## Handling Errors in Middleware
+
+You can handle errors from subsequent middleware or route handlers by checking `c.error`. See [c.error usage](/docs/api/context#cerror).
+
 ## Third-party Middleware
 
 Built-in middleware does not depend on external modules, but third-party middleware can depend on third-party libraries.
 So with them, we may make more complex application.
 
-For example, we are planning to release "*graphql-server*" middleware and "*firebase-auth*" middleware.
-
+For example, we are planning to release "_graphql-server_" middleware and "_firebase-auth_" middleware.
